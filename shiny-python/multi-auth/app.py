@@ -10,7 +10,7 @@ Required env vars:
   SNOWFLAKE_WAREHOUSE         - Snowflake warehouse
   SNOWFLAKE_DATABASE          - Snowflake database
   SNOWFLAKE_SCHEMA            - Snowflake schema
-  DATABRICKS_PATH        - Databricks SQL warehouse HTTP path
+  DATABRICKS_PATH             - Databricks SQL warehouse HTTP path
 """
 
 import os
@@ -49,7 +49,7 @@ def fetch_snowflake(access_token: str) -> pd.DataFrame:
 def fetch_databricks(access_token: str) -> pd.DataFrame:
     conn = dbsql.connect(
         server_hostname=os.environ["DATABRICKS_HOST"],
-        http_path=os.environ["DATABRICKS__PATH"],
+        http_path=os.environ["DATABRICKS_PATH"],
         access_token=access_token,
     )
     try:
