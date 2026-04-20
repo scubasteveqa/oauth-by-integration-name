@@ -7,7 +7,7 @@ the Databricks integration GUID by name.
 Required env vars:
   DATABRICKS_INTEGRATION_NAME - name of the Databricks integration in Connect
   DATABRICKS_HOST             - Databricks workspace hostname
-  DATABRICKS_HTTP_PATH        - Databricks SQL warehouse HTTP path
+  DATABRICKS_PATH        - Databricks SQL warehouse HTTP path
 """
 
 import os
